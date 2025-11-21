@@ -18,7 +18,7 @@
 
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
     <h1 class="font-extrabold text-4xl md:text-7xl text-center">
-       TI 84 Calculator Online
+       Graphing Calculator Online
     </h1>
     <div class="flex flex-col items-center w-full p-6">
         <div class="flex flex-wrap justify-center gap-4">
@@ -42,7 +42,7 @@
             <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
                 <h2 class="font-bold text-xl mb-3">TI-30XS Calculator</h2>
                 <p class="text-[14px] text-[#696981] line-clamp-3">
-                    Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance.
+                   Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance.
                 </p>
             </a>
         </div>

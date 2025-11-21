@@ -1,11 +1,13 @@
-<nav class="py-2 lg:px-0 px-[15px]">
-    <div class="py-6 max-w-[1240px] m-auto flex justify-between items-center">
+<nav class="py-2 lg:px-0 px-[15px] border-b shadow">
+    <div class="py-2 max-w-[1240px] m-auto flex justify-between items-center">
         <a href="{{ route('home') }}" class="logo-here">
-            Logo here...
+            TI 84 Calculator Online
             {{-- <img src="{{ asset('assets/img/Logo.png') }}" width="200" alt=""> --}}
         </a>
         <div class="md:flex gap-4 hidden">
             <a href="{{ route('home') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Home</a>
+            <a href="{{ route('graphing-calculator') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Graphing Calculator</a>
+            <a href="{{ route('ti-30xs-calculator') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">TI-30XS Calculator</a>
             <a href="{{ route('about') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">About Us</a>
             <a href="{{ route('contact') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Contact</a>
         </div>
@@ -30,6 +32,8 @@
     <div class="px-[24px] pt-[24px] pb-[20px]">
         <ul class="space-y-4">
             <li><a href="{{ route('home') }}" class="block font-medium">Home</a></li>
+            <li><a href="{{ route('graphing-calculator') }}" class="block font-medium">Graphing Calculator</a></li>
+            <li><a href="{{ route('ti-30xs-calculator') }}" class="block font-medium">TI-30XS Calculator</a></li>
             <li><a href="{{ route('about') }}" class="block font-medium">About Us</a></li>
             <li><a href="{{ route('contact') }}" class="block font-medium">Contact</a></li>
         </ul>

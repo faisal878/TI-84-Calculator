@@ -36,13 +36,13 @@
             <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
                 <h2 class="font-bold text-xl mb-3">Graphing Calculator</h2>
                 <p class="text-[14px] text-[#696981] line-clamp-3">
-                    Generate secure bcrypt password hashes online with custom cost factor. Fast, safe, and compatible with Laravel and PHP applications.
+                   Generate secure bcrypt password hashes online with custom cost factor. Fast, safe, and compatible with Laravel and PHP applications.
                 </p>
             </a>
             <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
                 <h2 class="font-bold text-xl mb-3">TI-30XS Calculator</h2>
                 <p class="text-[14px] text-[#696981] line-clamp-3">
-                    Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance.
+                  Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance.
                 </p>
             </a>
         </div>

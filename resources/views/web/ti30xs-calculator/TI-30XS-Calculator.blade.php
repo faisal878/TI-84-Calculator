@@ -18,12 +18,12 @@
 
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
     <h1 class="font-extrabold text-4xl md:text-7xl text-center">
-       TI 84 Calculator Online
+        TI30XS Calculator Online
     </h1>
     <div class="flex flex-col items-center w-full p-6">
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="/ti84calc" target="_blank" class="font-bold text-base h-12 px-4 flex items-center rounded-lg bg-blue-400 text-white hover:bg-blue-500">
-                Start TI84
+            <a href="{{ route('ti-30xs-calculator-start') }}" target="_blank" class="font-bold text-base h-12 px-4 flex items-center rounded-lg bg-blue-400 text-white hover:bg-blue-500">
+                Start
             </a>
         </div>
     </div>

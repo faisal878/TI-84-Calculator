@@ -5,7 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () { return view('web.home'); })->name('home');
 Route::get('/graphing-calculator', function () { return view('web.graphing-calculator'); })->name('graphing-calculator');
-Route::get('/ti-30xs-calculator', function () { return view('web.ti-30xs-calculator'); })->name('ti-30xs-calculator');
+
+include_once __DIR__.'/ti-30xs-calculator.php';
+include_once __DIR__.'/ti84calc.php';
+
+
 Route::get('/about-us', function () { return view('web.about-us'); })->name('about');
 Route::get('/blogs', function () { return view('web.blogs'); })->name('blogs');
 Route::get('/contact-us', function () { return view('web.contact'); })->name('contact');

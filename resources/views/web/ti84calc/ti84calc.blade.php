@@ -18,12 +18,12 @@
 
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
     <h1 class="font-extrabold text-4xl md:text-7xl text-center">
-       TI 84 Calculator Online
+        TI30XS Calculator Online
     </h1>
     <div class="flex flex-col items-center w-full p-6">
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="{{ route('ti84calc-calculator-start') }}" target="_blank" class="font-bold text-base h-12 px-4 flex items-center rounded-lg bg-blue-400 text-white hover:bg-blue-500">
-                Start TI84
+            <a href="{{ route('ti-30xs-calculator-start') }}" target="_blank" class="font-bold text-base h-12 px-4 flex items-center rounded-lg bg-blue-400 text-white hover:bg-blue-500">
+                Start
             </a>
         </div>
     </div>
@@ -32,18 +32,18 @@
         <p class="text-neutral-500 text-lg leading-7 px-4">
             Easily add our TI-84 calculator simulator to your website with a simple iframe code. Give your users direct access to a fully functional TI-84 calculator, perfect for math and science needs—no extra setup required!
         </p>
-        <div class="grid grid-cols-3 gap-4 justify-center mt-6">
-            <a href="#" class="p-6  rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
+        <div class="flex flex-col md:flex-row gap-4 justify-center mt-6">
+            <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
                 <h2 class="font-bold text-xl mb-3">Graphing Calculator</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Generate secure bcrypt password hashes online with custom cost factor. Fast, safe, and compatible with Laravel and PHP applications. </p>
+                <p class="text-[14px] text-[#696981] line-clamp-3">
+                   Generate secure bcrypt password hashes online with custom cost factor. Fast, safe, and compatible with Laravel and PHP applications.
+                </p>
             </a>
             <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
                 <h2 class="font-bold text-xl mb-3">TI-30XS Calculator</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance. </p>
-            </a>
-            <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
-                <h2 class="font-bold text-xl mb-3">TI 84 Calculator Online</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance. </p>
+                <p class="text-[14px] text-[#696981] line-clamp-3">
+                  Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance.
+                </p>
             </a>
         </div>
     </div>

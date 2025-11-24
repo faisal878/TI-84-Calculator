@@ -7,9 +7,12 @@ Route::get('/', function () { return view('web.home'); })->name('home');
 Route::get('/graphing-calculator', function () { return view('web.graphing-calculator'); })->name('graphing-calculator');
 Route::get('/ti-30xs-calculator', function () { return view('web.ti-30xs-calculator'); })->name('ti-30xs-calculator');
 Route::get('/about-us', function () { return view('web.about-us'); })->name('about');
+Route::get('/blogs', function () { return view('web.blogs'); })->name('blogs');
 Route::get('/contact-us', function () { return view('web.contact'); })->name('contact');
 Route::get('/privacy-policy', function () { return view('web.privacy-policy'); })->name('privacy-policy');
 Route::get('/terms-and-conditions', function () { return view('web.terms-and-conditions'); })->name('terms-and-conditions');
+Route::get('/card', function () { return view('web.card-detail'); })->name('card.detail');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

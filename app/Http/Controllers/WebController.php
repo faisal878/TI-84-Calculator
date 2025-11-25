@@ -6,8 +6,6 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Setting;
 use App\Models\Tool;
-use Honeystone\Seo\Facades\Seo;
-use Honeystone\Seo\Generators\OpenGraphGenerator;
 use Illuminate\Support\Str;
 
 class WebController extends Controller
@@ -15,7 +13,7 @@ class WebController extends Controller
     public function home(){
        
         $tool = Tool::with('parentTool','childTools')->where('home', 1)->where('status', 1)->first();
-        $tools = Tool::where('home',0)->where('index', 1)->whereNull('tool_id')->where('status', 1)->get();
+        $tools = Tool::where('home',0)->whereNull('tool_id')->where('status', 1)->get();
         if($tool){
             seo()
             ->title($tool->meta_title)

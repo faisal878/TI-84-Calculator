@@ -18,7 +18,7 @@
                 <div class="">
                     <p class="text-[#b3d9cc] font-bold mb-3">Useful Links</p>
                     <a href="{{ route('home') }}" class="text-white block mb-2">Home</a>
-                    <a href="{{ route('about') }}" class="text-white block mb-2">About Us</a>
+                    {{-- <a href="{{ route('about') }}" class="text-white block mb-2">About Us</a> --}}
                     <a href="{{ route('contact') }}" class="text-white block mb-2">Contact Us</a>
                     <a href="{{ route('terms-and-conditions') }}" class="text-white block mb-2">Term and Condition</a>
                     <a href="{{ route('privacy-policy') }}" class="text-white block mb-2">Privacy policy</a>

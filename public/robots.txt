@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Allow: /
+
+# Sitemap links
+Sitemap: https://manamil.dev/sitemap.xml
+

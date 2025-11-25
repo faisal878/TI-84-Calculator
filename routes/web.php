@@ -1,31 +1,27 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () { return view('web.home'); })->name('home');
-Route::get('/graphing-calculator', function () { return view('web.graphing-calculator'); })->name('graphing-calculator');
+// Route::get('/', function () { return view('web.home'); })->name('home');
+Route::get('/', [WebController::class, 'home'])->name('home');
 
-include_once __DIR__.'/ti-30xs-calculator.php';
-include_once __DIR__.'/ti84calc.php';
+Route::get('/contact-us', [WebController::class, 'contact'])->name('contact');
+Route::get('/about-us', [WebController::class, 'about_us'])->name('about-us');
 
+Route::get('/privacy-policy', [WebController::class, 'privacy_policy'])->name('privacy-policy');
+Route::get('/terms-and-conditions', [WebController::class, 'terms_and_conditions'])->name('terms-and-conditions');
 
-Route::get('/about-us', function () { return view('web.about-us'); })->name('about');
-Route::get('/blogs', function () { return view('web.blogs'); })->name('blogs');
-Route::get('/contact-us', function () { return view('web.contact'); })->name('contact');
-Route::get('/privacy-policy', function () { return view('web.privacy-policy'); })->name('privacy-policy');
-Route::get('/terms-and-conditions', function () { return view('web.terms-and-conditions'); })->name('terms-and-conditions');
-Route::get('/card', function () { return view('web.card-detail'); })->name('card.detail');
+Route::post('/send/email', [ContactController::class, 'store'])->name('contact.sendEmail');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/sitemap.xml', function () {
+    $posts = \App\Models\Post::orderBy('id', 'desc')->where('is_published', 1)->get();
+    $tools = \App\Models\Tool::with('parentTool','childTools')->where('home', '0')->where('index', 1)->whereNull('tool_id')->orderBy('id', 'desc')->where('status', 1)->get();
+    return response()->view('sitemap.xml', compact('posts', 'tools'))->header('Content-Type', 'application/xml');
 });
 
-require __DIR__.'/auth.php';
+include('blog.php');
+include('admin/admin.php');
+include('tools.php');

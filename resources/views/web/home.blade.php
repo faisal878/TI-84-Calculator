@@ -1,12 +1,16 @@
 @extends('app')
 @php
-    $metaTtitle = '';
+    $metaTtitle = 'We Are Manamil — Digital Solutions & AI Innovation';
 @endphp
 
-@section('content')
+@push('style')
+    <link rel="stylesheet" type="text/css" href="{{ asset("ti84/ti84.css") }}"/>
+@endpush
 
+@section('content')
 @include('web.inc.navbar')
-<div class="p-8 w-80 m-auto">
+
+<div class="pt-8 w-80 m-auto">
     <a class="rounded-full border text-neutral-500 hover:border-neutral-500 border-bd-color cursor-pointer flex items-center justify-center h-7" href="https://tihub.org/">
         <span class="inline-block h-2 w-2 rounded-full bg-red-500 mr-2"></span>
         <span class="text-xs mr-2">Want to run <strong>apps</strong> online? Try this!</span>
@@ -17,94 +21,87 @@
 </div>
 
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
-    <h1 class="font-extrabold text-4xl md:text-7xl text-center">
-       TI 84 Calculator Online
-    </h1>
-    <div class="flex flex-col items-center w-full p-6">
+    <h1 class="font-extrabold text-4xl md:text-7xl text-center"> {{ $tool->title }} </h1>
+    <div class="flex flex-col items-center w-full">
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="{{ route('ti84calc-calculator-start') }}" target="_blank" class="font-bold text-base h-12 px-4 flex items-center rounded-lg bg-blue-400 text-white hover:bg-blue-500">
-                Start TI84
-            </a>
+            <div class=""><div id="calculatorDiv" class="m-auto"></div></div>
         </div>
     </div>
     <div class="space-y-4">
         <h2 class="font-extrabold text-xl md:text-2xl">Embed the TI-84 Calculator Online on Your Site!</h2>
-        <p class="text-neutral-500 text-lg leading-7 px-4">
-            Easily add our TI-84 calculator simulator to your website with a simple iframe code. Give your users direct access to a fully functional TI-84 calculator, perfect for math and science needs—no extra setup required!
-        </p>
-        <div class="grid grid-cols-3 gap-4 justify-center mt-6">
-            <a href="#" class="p-6  rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
-                <h2 class="font-bold text-xl mb-3">Graphing Calculator</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Generate secure bcrypt password hashes online with custom cost factor. Fast, safe, and compatible with Laravel and PHP applications. </p>
-            </a>
-            <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
-                <h2 class="font-bold text-xl mb-3">TI-30XS Calculator</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance. </p>
-            </a>
-            <a href="#" class="p-6 rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
-                <h2 class="font-bold text-xl mb-3">TI 84 Calculator Online</h2>
-                <p class="text-[14px] text-[#696981] line-clamp-3"> Run a free SSL server test to analyze your website’s SSL certificate, configuration, and overall security grade. Find vulnerabilities, verify HTTPS setup, and improve your site’s SSL performance. </p>
-            </a>
+        <p class="text-neutral-500 text-lg leading-7 px-4"> Easily add our TI-84 calculator simulator to your website with a simple iframe code. Give your users direct access to a fully functional TI-84 calculator, perfect for math and science needs—no extra setup required! </p>
+        <div class="grid grid-cols-2 gap-4 justify-center mt-6">
+            @if ($tools->isNotEmpty())
+                @foreach ($tools as $item)
+                    <a href="{{ url($item->slug) }}" class="p-6  rounded-lg border border-gray-200 hover:shadow-lg cursor-pointer transition-shadow duration-300 block max-w-md">
+                        <h2 class="font-bold text-xl mb-3 capitalize">{{ $item->title }}</h2>
+                        <p class="text-[14px] text-[#696981] line-clamp-3">{{ $item->meta_description }}</p>
+                    </a>
+                @endforeach
+            @endif
         </div>
     </div>
-    <div class="space-y-4">
-        <p class="text-neutral-500 text-lg leading-relaxed text-center">
-           Are you looking for a <strong>TI 84 calculator online</strong>?<br><br>
-           Our website offers a free, user-friendly <strong>TI-84 graphing calculator simulator</strong> that allows you to perform complex calculations without the need for physical hardware.<br><br>
-           Whether you're a student working on math assignments or a professional solving technical problems, this online calculator is designed to help you tackle it all.<br><br>
-           If you encounter any issues or have suggestions, please submit feedback <br>through the email. 
-           <a href="mailto:support@ti84calc.com" class="text-blue-600 underline decoration-from-font" title="TI 84 Calculator Online">
-                support@ti84calc.com
-            </a>. 
-        </p>
-        <h2 class="font-extrabold text-2xl">Why Use Our TI 84 Calculator Online?</h2>
-        <p class="text-neutral-500 text-lg leading-7">
-            The TI-84 Plus and TI-84 Plus CE are two of the most popular calculators used in schools and universities for graphing, algebra, calculus, and more. But not everyone has access to these expensive devices at all times. That’s where our online TI-84 calculator comes in handy. It's available 24/7, requires no installation, and is 100% free.
-        </p>
-        <h3 class="font-bold text-xl">Key Features</h3>
-        <ul class="list-disc list-inside text-neutral-500 space-y-1">
-            <li><strong>Graphing Capabilities:</strong> Plot functions, graphs, and equations with ease.</li>
-            <li><strong>Scientific Functions:</strong> Solve algebraic expressions, calculus problems, and more.</li>
-            <li><strong>TI-84 Plus & CE Compatibility:</strong> Our simulator mimics the experience of using both the TI-84 Plus and TI-84 Plus CE models.</li>
-            <li><strong>No Downloads or Installs:</strong> Use the calculator directly from your browser without any downloads.</li>
-            <li><strong>Free and Accessible:</strong> Completely free to use for students, teachers, and professionals.</li>
-        </ul>
-        <h3 class="font-bold text-xl">How to Use the TI 84 Calculator Online</h3>
-        <ol class="list-decimal list-inside text-neutral-500 space-y-1">
-            <li>Open the calculator on our website.</li>
-            <li>Enter your equations or expressions using the keypad.</li>
-            <li>Use the graphing feature to plot functions or visualize data.</li>
-            <li>Explore advanced features for solving calculus or algebra problems.</li>
-        </ol>
-        <h3 class="font-bold text-xl">Who Can Benefit from This Online TI 84 Calculator?</h3>
-        <ul class="list-disc list-inside text-neutral-500 space-y-1">
-            <li><strong>Students:</strong> Perfect for math, science, and engineering courses.</li>
-            <li><strong>Teachers:</strong> Use it in classrooms for demonstrations or virtual learning sessions.</li>
-            <li><strong>Professionals:</strong> Engineers, data analysts, and other professionals who need a reliable graphing calculator on the go.</li>
-        </ul>
-        <h3 class="font-bold text-xl">FAQ: Common Questions About Our TI 84 Calculator Online</h3>
-        <ul class="list-disc list-inside text-neutral-500 space-y-1">
-            <li><strong>Is it free?</strong> Yes, completely free with no hidden fees.</li>
-            <li><strong>Does it work like a real TI-84?</strong> Yes, it mimics the TI-84 Plus & CE calculators.</li>
-            <li><strong>Mobile Friendly?</strong> Fully optimized for desktop and mobile browsers.</li>
-        </ul>
-        <h3 class="font-bold text-xl">Conclusion</h3>
-        <p class="text-neutral-500 text-lg leading-7">
-            Our TI 84 calculator online offers a free, easy-to-use solution for anyone in need of a powerful graphing calculator. Whether you're solving algebra problems, plotting graphs, or working on calculus, this tool has you covered. Visit our website today and start using the TI-84 Plus and TI-84 Plus CE simulator for free!
-        </p>
-        <p class="font-bold text-lg">
-            Start calculating now at 
-            <a href="https://ti84calc.com" class="text-blue-600 underline decoration-from-font">
-               ti84calc.com
-            </a>.
-        </p>
-    </div>
+    @php
+        $rawData = json_decode($tool->data, true);
+    @endphp
+    <div class="space-y-4">{!! @$rawData['content']['value'] !!}</div>
 </div>
-
 
 @include('web.inc.footer')
 @endsection
 
 @push('script')
+<script src="https://mn.testnav.com/client/texasinstruments/js/ELG-min.js"></script>
+    <!-- these tags would contain inlined data files in the html bundle-->
+    <script id="h84statej" type="application/json" data-url="https://mn.testnav.com/client/texasinstruments/bin/No_AppsCE.h84statej"></script>
+    <script id="ti84faceplate" type="application/json" data-url="https://mn.testnav.com/client/texasinstruments/images/TI84CE_touch.svg"></script>
+<script>
+      const from_id = (id) => document.getElementById(id);
+      const h84statej = from_id("h84statej");
+      const ti84faceplate = from_id("ti84faceplate");
+      const calc_div = from_id("calculatorDiv");
+      const main_div = from_id("main_div");
 
+      //proxy the xmlhttprequest open to remove the hash from the url
+      XMLHttpRequest.prototype.open = new Proxy(XMLHttpRequest.prototype.open, {
+        apply: function (target, thisArg, args) {
+          if (typeof args[1] === "string") {
+            args[1] = args[1].replace(/#.*$/, "");
+          }
+          Reflect.apply(target, thisArg, args);
+        },
+      })
+
+      function create_blob(string) {
+        if (!string) return null;
+        let blob = new Blob([JSON.parse(string)]);
+        return URL.createObjectURL(blob);
+      }
+
+      function open_popup() {
+        let width = window.getComputedStyle(calc_div)["width"].replace("px", "");
+        let height = window.getComputedStyle(calc_div)["height"].replace("px", "");
+        let new_url = new URL(location.href);
+        new_url.hash = "popup";
+        window.open(new_url.href, null, `height=${height}, width=${width}`);
+      }
+
+      function main() {
+        if (location.hash === "#popup" || location.protocol == "file:"){
+          main_div.style.display = "none";
+        }
+
+        let default_rom = h84statej.getAttribute("data-url");
+        let default_faceplate = ti84faceplate.getAttribute("data-url");
+
+        let rom_url = create_blob(h84statej.innerHTML) || default_rom;
+        let faceplate_url = create_blob(ti84faceplate.innerHTML) || default_faceplate;
+        
+        rom_url += "#.h84statej";
+        faceplate_url += "#.svg";
+        let ti84 = new TI84PCE({ROMLocation: rom_url, FaceplateLocation: faceplate_url});
+      }
+
+      main();
+    </script> 
 @endpush  

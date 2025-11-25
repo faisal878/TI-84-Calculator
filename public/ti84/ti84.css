@@ -8504,10 +8504,7 @@ a.ui-button:active,
 }
 
 @media(max-width: 767px) {
-    body {
-        padding-left: 20px;
-        padding-right: 20px
-    }
+ 
 
     .navbar-fixed-top,
     .navbar-fixed-bottom,
@@ -9606,9 +9603,6 @@ a.ui-button:active,
 }
 
 @media(max-width: 979px) {
-    body {
-        padding-top: 0
-    }
 
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -12909,10 +12903,7 @@ body.ipad .magnifying_glass {
     }
 }
 
-body {
-    --filter-black-to-fg-color: brightness(0);
-    --filter-black-to-bg-color: brightness(0) invert(1)
-}
+
 
 body.altSkin {
     background: none;
@@ -12989,12 +12980,7 @@ body.altSkin .ReactModalPortal #currentItemIndicator {
     --fg-color: #007bff
 }
 
-body {
-    background: #e9e9e9 url("../images/global/body-bg.png") repeat 0 0;
-    min-height: 100vh;
-    box-sizing: border-box;
-    overscroll-behavior-x: none
-}
+
 
 body.edge #main_panel {
     touch-action: manipulation
@@ -13122,6 +13108,10 @@ canvas {
     -ms-user-select: none;
     user-select: none;
     -moz-user-select: -moz-none
+}
+
+#calculatorDiv{
+    margin:auto;
 }
 
 body.surface.ie {

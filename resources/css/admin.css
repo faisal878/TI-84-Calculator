@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Preline UI */
+
+
+[x-cloak] {
+    display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.level-active{
+  @apply bg-blue-200;
+
+}
+body {
+  font-family: "Inter", serif;
+}
+
+p, a, ul, ol, span {
+  font-family: "Inter", serif;
+}
+
+.dropbox.active{
+  background-color: #2563eb;
+  /* background-color: #E5E7EB; */
+}
+.dropbox:hover .text,
+.dropbox.active .text{
+  color: #030639;
+}
+/* .dropbox:hover .dropbox-icon, */
+.dropbox.active .dropbox-icon{
+  rotate: -180deg ;
+}
+.dropbox:hover .dropbox-menu-icon,
+.dropbox.active .dropbox-menu-icon{
+  filter: brightness(0.8);
+  filter: invert(100%);
+}
+/* textarea,
+input{
+  @apply uppercase;
+} */
+.skewX {
+
+  transform: skewX(40deg);
+}
+.error-border {
+    border: 2px solid red;
+}
+
+.pdf-mode .firstTh th{
+  font-size: 13px;
+}
+.pdf-mode .secondTh th{
+  font-size: 10px;
+  white-space: nowrap;
+}
+.pdf-mode th{
+  font-size: 12px;
+}
+.pdf-mode td{
+  font-size: 10px;
+}
+th,
+td {
+    text-transform: uppercase;
+}
+
+
+.headingFont{
+    font-size:12px;
+    font-weight:bold;
+    padding:8px;
+}
+.dataFont{
+    font-size:12px;
+    padding:8px;
+}
+
+.sidebarlink{
+  @apply mb-[5px] justify-between hover:bg-blue-600 block py-2 ps-[6.6px] pe-2 rounded-md;
+}
+.sidebardropdownlink{
+  @apply mb-1 block py-1 ps-2 hover:text-[#030639] text-[12.5px] rounded-lg hover:bg-gray-200;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar {
+  scrollbar-gutter: stable;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+
+
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
+    box-shadow: 30px 0 0 #3b82f6;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #3b82f6;
+    box-shadow: 30px 0 0 #fff;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #3b82f6;
+    }
+    50% {
+      box-shadow: 0 0 0 #3b82f6;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #3b82f6;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #fff;
+    }
+    50% {
+      box-shadow: 0 0 0 #fff;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #fff;
+      margin-top: 0;
+    }
+  }
+  
+
+
+.saveme:focus {
+    outline: none;          /* default focus outline remove */
+    border: 2px solid green; /* ya background-color green bhi kar sakte ho */
+    background-color: green; /* optional light green background */
+}

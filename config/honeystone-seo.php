@@ -21,9 +21,9 @@ return [
                         'Hopefully you find what you are looking for 👍'
                 ],
                 [
-                    'google-site-verification' => 'JzIa0ftQOvXXTtq9ko-crKbw-_VukXudpSoxHRFu6is',
-                    'msvalidate.01' => 'BEAE4D295C6863FD700A8283285DE295',
-                    'yandex-verification' => 'c46dc43e52dbe677',
+                    'google-site-verification' => '',
+                    'msvalidate.01' => '',
+                    'yandex-verification' => '',
                 ]
             ],
             'include_meta_generator_comment' => false,

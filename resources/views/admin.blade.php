@@ -24,7 +24,7 @@
 </head>
 
 @php
-    echo $loginUrl = route('login');
+    echo $loginUrl = route('admin.login');
 
     $authUrls = [ $loginUrl ];
 @endphp

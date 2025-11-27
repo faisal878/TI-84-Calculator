@@ -9,7 +9,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/admin/login', [UserController::class, 'showLoginForm'])->name('login');
+Route::get('/admin/login', [UserController::class, 'showLoginForm'])->name('admin.login');
 
 Route::post('/admin/authentication', [UserController::class, 'authentication'])->name('authentication');
 Route::middleware(['auth'])->group(function () {

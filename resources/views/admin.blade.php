@@ -24,12 +24,9 @@
 </head>
 
 @php
-    $loginUrl = route('login');
+    echo $loginUrl = route('login');
 
-     $authUrls = [
-        $loginUrl,
-       
-    ];
+    $authUrls = [ $loginUrl ];
 @endphp
 <body class="{{ !in_array(request()->url(), $authUrls) ? 'bg-[#E9E9E9]' : '' }}">
     

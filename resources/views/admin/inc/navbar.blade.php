@@ -24,7 +24,7 @@
                         <img src="{{ asset('assets/img/userprofile.png') }}" class="w-full h-[60px] object-cover" alt="">
                     {{-- @endif --}}
                 </div>
-                @if (Auth::user()->image)
+                @if (Auth::check())
                     <div class="ml-3 lg:block hidden">
                         <p class="mb-0"><strong>{{ Auth::user()->name }}</strong></p>
                         <p class="mb-0 text-gray-500">{{ Auth::user()->email }}</p>

@@ -9,7 +9,7 @@ return [
     'generators' => [
         Generators\MetaGenerator::class => [
             'title' => env('APP_NAME'),
-            'titleTemplate' => '{title} - '.env('APP_NAME'),
+            'titleTemplate' => '{title}',
             'description' => '',
             'keywords' => [],
             'canonicalEnabled' => true,

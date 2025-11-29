@@ -6,6 +6,11 @@
 
 @push('style')
     <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <style>
+        .dcg-powered-by{
+            display: none !important;
+        }
+    </style>
 @endpush
 
 @section('content')

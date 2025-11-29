@@ -56,6 +56,17 @@
                 </div>
             </div>
         </a>
+        <a href="{{ route('admin.home') }}" class="sidebarlink group {{ Request::is('admin/home*') ? 'bg-blue-600 font-bold text-white' : 'text-[#5C5E64]' }}">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="min-w-[16px] min-h-[16px] flex items-center justify-center mr-2">
+                        <img src="{{ asset('assets/img/icons/Home-simple-door.svg') }}" class="object-fit w-[16px] h-[16px] {{ Request::is('admin/home*') ? 'hidden' : 'block' }} group-hover:hidden" alt="home icon">
+                        <img src="{{ asset('assets/img/icons/Home-simple-door-white.svg') }}" class="object-fit w-[16px] h-[16px] {{ Request::is('admin/home*') ? 'block' : 'hidden' }} group-hover:block" alt="home icon">
+                    </div>
+                    <span class="menu-text hidden group-hover:text-white text-[12.5px] leading-none">Home</span>
+                </div>
+            </div>
+        </a>
         <a href="{{ route('admin.tools.index') }}" class="sidebarlink group {{ Request::is('admin/tools*') ? 'bg-blue-600 font-bold text-white' : 'text-[#5C5E64]' }}">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -88,6 +99,18 @@
                         <img src="{{ asset('assets/img/icons/Home-simple-door-white.svg') }}" class="object-fit w-[16px] h-[16px] {{ Request::is('admin/privacy-policy*') ? 'block' : 'hidden' }} group-hover:block" alt="home icon">
                     </div>
                     <span class="menu-text hidden group-hover:text-white text-[12.5px] leading-none">Privacy Policy</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="{{ route('admin.social.media') }}" class="sidebarlink group {{ Request::is('admin/social-media*') ? 'bg-blue-600 font-bold text-white' : 'text-[#5C5E64]' }}">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="min-w-[16px] min-h-[16px] flex items-center justify-center mr-2">
+                        <img src="{{ asset('assets/img/icons/Home-simple-door.svg') }}" class="object-fit w-[16px] h-[16px] {{ Request::is('admin/social-media*') ? 'hidden' : 'block' }} group-hover:hidden" alt="home icon">
+                        <img src="{{ asset('assets/img/icons/Home-simple-door-white.svg') }}" class="object-fit w-[16px] h-[16px] {{ Request::is('admin/social-media*') ? 'block' : 'hidden' }} group-hover:block" alt="home icon">
+                    </div>
+                    <span class="menu-text hidden group-hover:text-white text-[12.5px] leading-none">Social Media</span>
                 </div>
             </div>
         </a>

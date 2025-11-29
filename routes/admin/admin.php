@@ -54,10 +54,11 @@ Route::middleware(['auth'])->group(function () {
     include('gallery.php');
     include('tools.php');
  
-
+    Route::get('/admin/home', [SettingController::class, 'home'])->name('admin.home');
     Route::get('/admin/privacy-policy', [SettingController::class, 'privacy'])->name('admin.privacy.policy');
     Route::get('/admin/terms-and-conditions', [SettingController::class, 'terms'])->name('admin.terms.condition');
     Route::post('/admin/setting/store', [SettingController::class, 'updateSetting'])->name('admin.settings.store');
+    Route::get('/admin/social/media', [SettingController::class, 'socialmedia'])->name('admin.social.media');
 
     Route::get('/admin/contact-us', [ContactController::class, 'index'])->name('admin.contact.us');
 

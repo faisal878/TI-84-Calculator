@@ -451,15 +451,24 @@ pre code {
   @apply font-bold mb-3 leading-tight lg:text-[42px] md:text-[33px] text-[23px] text-[#22281E] relative;
 }
 .content p{
-  @apply text-[18px] text-[#696981];
+  @apply text-[18px] text-[#696981] mb-3;
 }
 .content ul{
   @apply pl-5;
 }
-.content li{
-  @apply text-[18px] text-[#696981] list-disc;
+.content ol{
+  @apply pl-5;
+}
+.content ul li{
+  @apply text-[18px] text-[#696981] list-disc mb-1;
 }
 
+.content ol{
+  @apply pl-5 mb-4;
+}
+.content ol li{
+  @apply text-[18px] text-[#696981] list-decimal mb-1;
+}
 .content h3{
   @apply font-bold leading-tight lg:text-[26px] md:text-[18px] text-[18px] text-[#22281E] relative;
 }

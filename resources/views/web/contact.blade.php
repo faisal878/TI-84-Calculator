@@ -14,16 +14,24 @@
         <div class="grid lg:grid-cols-2 gap-10">
             <div class="">
                 <h2 class="text-xl font-semibold mb-2">Send an email</h2>
-                <a href="" class="inline-flex text-[#696981]">
+                <div class="inline-flex text-[#696981] items-center">
                     <img src="{{ asset('assets/img/icons/mail.svg') }}" width="20" alt="email" class="me-2">
-                    <a href="mailto:example@gmail.com">example@gmail.com</a>
-                </a>
-                {{-- <h2 class="text-xl font-semibold mb-2 mt-5">Follow Us</h2> --}}
-                {{-- <div class="flex items-center gap-3">
-                    <a href="" class="" target="blank"><img src="{{ asset('assets/img/x_black.svg') }}" width="20" alt="x" class=""></a>
-                    <a href="" class="" target="blank"><img src="{{ asset('assets/img/fb_black.svg') }}" width="20" alt="facebook" class=""></a>
-                    <a href="" class="" target="blank"><img src="{{ asset('assets/img/linkedin_black.svg') }}" width="20" alt="linkedin" class=""></a>
-                </div> --}}
+                    <a href="mailto:mfaisalsaim3@gmail.com">mfaisalsaim3@gmail.com</a>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 mt-5">Follow Us</h2>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-3">
+                        @if(isset($socialMedia['Facebook']))
+                            <a href="{{ $socialMedia['Facebook'] }}" target="_blank"><img src="{{ asset('assets/img/fb_black.svg') }}" width="20" alt="Facebook Icon"></a>
+                        @endif
+                        @if(isset($socialMedia['Twitter']))
+                            <a href="{{ $socialMedia['Twitter'] }}" target="_blank"><img src="{{ asset('assets/img/x_black.svg') }}" width="20" alt="X Icon"></a>
+                        @endif
+                        @if(isset($socialMedia['Instagram']))
+                            <a href="{{ $socialMedia['Instagram'] }}" target="_blank"><img src="{{ asset('assets/img/icons/Instagram_black.png') }}" width="20" alt="Instagram Icon"></a>
+                        @endif
+                    </div>
+                </div>
             </div>
             <div class="">
                 <form action="{{ route('contact.sendEmail') }}" method="post" class="grid gap-3">

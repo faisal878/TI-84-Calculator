@@ -4,44 +4,28 @@
 @section('content')
 @include('web.inc.navbar')
 <section class="lg:px-0 px-[15px]">
-    <div class="max-w-[1240px] m-auto text-center relative py-16 overflow-hidden">
+    <div class="max-w-[1240px] m-auto text-center relative pt-16 overflow-hidden">
         <h1 class="font-bold mb-6 max-w-[940px] m-auto leading-tight lg:text-[52px] md:text-[42px] text-[33px] text-[#22281E] relative">About <span class="text-[#034737]"> Us</span></h1>
-        <p class="text-[18px] max-w-[600px] m-auto text-[#696981]">We’re passionate about innovation and technology. At manamil.dev, our goal is to build solutions that inspire and empower.</p>
     </div>
 </section>
-{{-- 
+
 <section class="pb-24 relative overflow-hidden lg:px-0 px-[15px]">
     <div class="max-w-[1240px] m-auto">
-        <div class="grid lg:grid-cols-2 items-center gap-10">
-            <div class="">
-                <h2 class="text-3xl font-bold mb-2 text-[#034737]">About Manamil Dev</h2>
-                <p class="text-[18px] text-[#696981] mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, necessitatibus molestias soluta quos ea minus quam reprehenderit voluptatem, nostrum id suscipit assumenda! Temporibus voluptatum veritatis similique. Obcaecati vel atque cum.</p>
-                <p class="text-[18px] text-[#696981]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, necessitatibus molestias soluta quos ea minus quam reprehenderit voluptatem.</p>
-            </div>
-            <div class="flex justify-end">
-                <img src="{{ asset('assets/img/page-about-2.jpg') }}" class="w-full rounded-lg" alt="">
+        <div class="grid lg:grid-cols-1 items-center gap-10">
+            <div class="max-w-[800px] m-auto">
+                <p class="text-[18px] text-[#696981] mb-2 text-center">
+                    Welcome to TI84Calc.com – your go-to online hub for free, reliable, and easy-to-use calculators. Whether you’re a student tackling algebra, calculus, or graphing problems, a teacher preparing lessons, or a professional needing quick calculations, we’ve got you covered.
+                    <br> <br>
+                    Our platform offers the TI-84 graphing calculator and TI-30XS scientific calculator online—fully functional and accessible from any device, no downloads or installations required. Our goal is to make learning and problem-solving simple, fast, and convenient for everyone.
+                    <br> <br>
+                    At TI84Calc.com, we are passionate about helping you achieve accuracy, save time, and gain confidence in your math skills. 
+                    Explore our calculators, tutorials, and tools, and make complex calculations effortless.
+                </p>
             </div>
         </div>
     </div>
 </section>
-<section class="pb-24 relative overflow-hidden lg:px-0 px-[15px]">
-    <div class="max-w-[1240px] m-auto">
-        <div class="grid lg:grid-cols-3 items-center gap-10">
-            <div class="">
-                <h3 class="text-xl font-bold mb-2 text-[#034737]">Our Mission</h3>
-                <p class="text-[18px] text-[#696981] mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, necessitatibus molestias soluta quos ea minus quam reprehenderit voluptatem.</p>
-            </div>
-            <div class="">
-                <h3 class="text-xl font-bold mb-2 text-[#034737]">Our Vision</h3>
-                <p class="text-[18px] text-[#696981] mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, necessitatibus molestias soluta quos ea minus quam reprehenderit voluptatem.</p>
-            </div>
-            <div class="">
-                <h3 class="text-xl font-bold mb-2 text-[#034737]">Our Core Values</h3>
-                <p class="text-[18px] text-[#696981] mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, necessitatibus molestias soluta quos ea minus quam reprehenderit voluptatem.</p>
-            </div>
-        </div>
-    </div>
-</section> --}}
+
 
 @include('web.inc.footer')
 @endsection

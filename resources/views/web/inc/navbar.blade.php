@@ -1,14 +1,13 @@
 <nav class="py-2 lg:px-0 px-[15px] border-b shadow">
     <div class="py-2 max-w-[1240px] m-auto flex justify-between items-center">
         <a href="{{ route('home') }}" class="logo-here">
-            TI 84 Calculator Online
-            {{-- <img src="{{ asset('assets/img/Logo.png') }}" width="200" alt=""> --}}
+            <img src="{{ asset('assets/img/logo.png') }}" width="200" alt="">
         </a>
         <div class="md:flex gap-4 hidden">
             <a href="{{ route('home') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Home</a>
             <a href="{{ url('/online-graphing-calculator') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Graphing Calculator</a>
             <a href="{{ url('/ti-30xs-calculator-online') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">TI-30XS Calculator</a>
-            <a href="" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">About Us</a>
+            <a href="{{ url('/about-us') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">About Us</a>
             <a href="{{ route('home.blog') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Blogs</a>
             <a href="{{ route('contact') }}" class="inline-block font-medium py-[5px] px-[14px] rounded-xl hover:text-[#034737] hover:bg-[#EDF2F1]">Contact</a>
         </div>
@@ -22,8 +21,7 @@
 <div class="sideMenu fixed -translate-x-full top-0 left-0 right-0 bottom-0 bg-white grid grid-rows-[auto_1fr_auto] z-50 transition-transform duration-500 ease-in-out">
     <div class="py-6 px-[24px] flex justify-between items-center">
         <a href="{{ route('home') }}" class="logo-here">
-            Logo here
-            {{-- <img src="{{ asset('assets/img/Logo.png') }}" width="200" alt=""> --}}
+            <img src="{{ asset('assets/img/logo.png') }}" width="200" alt="">
         </a>
         <button id="closeBtn" type="button" class="inline-flex items-center p-2 w-[48px] h-[48px] justify-center rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-0 focus:ring-transparent hover:bg-transparent active:bg-transparent">
             <img src="{{ asset('assets/img/close.svg') }}" alt="Close Icon" class="w-[40px] h-[40px]">
@@ -33,9 +31,9 @@
     <div class="px-[24px] pt-[24px] pb-[20px]">
         <ul class="space-y-4">
             <li><a href="{{ route('home') }}" class="block font-medium">Home</a></li>
-            <li><a href="#-" class="block font-medium">Graphing Calculator</a></li>
+            <li><a href="{{ url('/online-graphing-calculator') }}" class="block font-medium">Graphing Calculator</a></li>
             <li><a href="{{ url('/ti-30xs-calculator-online') }}" class="block font-medium">TI-30XS Calculator</a></li>
-            <li><a href="" class="block font-medium">About Us</a></li>
+            <li><a href="{{ url('/about-us') }}" class="block font-medium">About Us</a></li>
             <li><a href="{{ route('home.blog') }}" class="block font-medium">Blogs</a></li>
             <li><a href="{{ route('contact') }}" class="block font-medium">Contact</a></li>
         </ul>

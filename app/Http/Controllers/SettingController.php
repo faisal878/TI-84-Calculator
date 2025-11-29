@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
+    public function home()
+    {
+        $settings = Setting::where('type', 'home')->first();
+        return view('admin.settings.home', compact('settings'));
+    }
     public function privacy()
     {
         $settings = Setting::where('type', 'privacy-policy')->first();
@@ -19,6 +24,12 @@ class SettingController extends Controller
         return view('admin.settings.terms-and-conditions', compact('settings'));
     }
 
+    public function socialmedia()
+    {
+        $settings = Setting::where('type', 'social-media')->get();
+        return view('admin.settings.social-media', compact('settings'));
+    }
+
     public function updateSetting(Request $request)
     {
         $request->validate([
@@ -29,6 +40,17 @@ class SettingController extends Controller
             'content' => 'nullable|string',
         ]);
 
+        
+        if($request->type == 'social-media'){
+            $fields = ['Facebook', 'Twitter', 'Instagram', 'LinkedIn'];
+            foreach ($fields as $field) {
+                Setting::updateOrCreate(
+                    ['type' => 'social-media', 'title' => $field],
+                    ['data' => $request->input($field)]
+                );
+            }
+            return redirect()->back()->with('success', 'Social media links updated successfully.');
+        }
         $settings = Setting::updateOrCreate(
             ['type' => $request->type],
             [

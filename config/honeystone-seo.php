@@ -21,7 +21,7 @@ return [
                         'Hopefully you find what you are looking for 👍'
                 ],
                 [
-                    'google-site-verification' => '',
+                    'google-site-verification' => 'q1f7ZuoguGOwiB0OANeWNzBt4Nb4zbz17XvP81fjxyk',
                     'msvalidate.01' => '',
                     'yandex-verification' => '',
                 ]

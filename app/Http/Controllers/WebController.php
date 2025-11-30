@@ -45,7 +45,7 @@ class WebController extends Controller
             ->keywords($homeSetting->meta_keywords )
             ->images(asset('assets/img/logo.png'))
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow');
+            ->robots('index', 'follow');
         // }
         
         
@@ -73,7 +73,7 @@ class WebController extends Controller
         seo()->title('TI Calculator Blog | Tips, Tutorials & Online Calculator Guides')
             ->description('Explore our TI calculator blog for tutorials, tips, and guides on TI-84, TI-84 Plus CE, TI-30XS, and other online calculators. Learn how to use virtual calculators, graph functions, and solve equations with ease.')
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow'); 
+            ->robots('index', 'follow'); 
 
         return view('web.articles', compact('posts'));
     }
@@ -89,7 +89,7 @@ class WebController extends Controller
             ->keywords($post->meta_keywords)
             ->images(asset('storage/' . $post->featured_image))
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow')
+            ->robots('index', 'follow')
             
             // BASIC OG
             ->openGraphProperty('og:title', $post->title)
@@ -153,7 +153,7 @@ class WebController extends Controller
             ->description($category->meta_description)
             ->keywords($category->meta_keywords)
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow'); 
+            ->robots('index', 'follow'); 
         return view('web.articles-category', compact('categoires', 'posts', 'category'));
     }
 
@@ -163,7 +163,7 @@ class WebController extends Controller
             ->description('Get in touch with us through our contact page.')
             ->keywords('contact, get in touch, support')
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow'); 
+            ->robots('index', 'follow'); 
         return view('web.contact');
     }
 
@@ -173,7 +173,7 @@ class WebController extends Controller
             ->description('Learn more about us on our about page.')
             ->keywords('about, information, company')
             ->canonicalEnabled(true)
-            ->robots('noindex', 'nofollow'); 
+            ->robots('index', 'follow'); 
 
         return view('web.about-us');
     }

@@ -1,4 +1,4 @@
-<nav class="py-2 lg:px-0 px-[15px] border-b shadow">
+<nav class="py-2 lg:px-0 px-[15px] border-b shadow bg-blue-100">
     <div class="py-2 max-w-[1240px] m-auto flex justify-between items-center">
         <a href="{{ route('home') }}" class="logo-here">
             <img src="{{ asset('assets/img/logo.png') }}" width="200" alt="">

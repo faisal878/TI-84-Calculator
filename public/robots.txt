@@ -3,5 +3,5 @@ Disallow: /admin/
 Allow: /
 
 # Sitemap links
-Sitemap: https://manamil.dev/sitemap.xml
+Sitemap: https://ti-84calconline.com/sitemap.xml
 

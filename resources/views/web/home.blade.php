@@ -38,8 +38,6 @@
             @endforeach
         @endif
     </div>
-   
-
 </div>
 
   

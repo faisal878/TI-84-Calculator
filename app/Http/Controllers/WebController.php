@@ -37,7 +37,7 @@ class WebController extends Controller
             
         //     return view('web.home', compact('tool','tools', 'toolLang','xDefaultLink'));
         // }else{
-            $tools          = Tool::where('home',0)->whereNull('tool_id')->where('status', 1)->where('slug', '!=','ti-84-calculator')->orderByRaw("FIELD(title, 'Ti 84 calculator', 'Ti-30xs Calculator Online', 'online graphing calculator')")->get();
+            // $tools          = Tool::where('home',0)->whereNull('tool_id')->where('status', 1)->where('slug', '!=','ti-84-calculator')->orderByRaw("FIELD(title, 'Ti 84 calculator', 'Ti-30xs Calculator Online', 'online graphing calculator')")->get();
             $homeSetting    = Setting::where('type', 'home')->first();
             seo()
             ->title($homeSetting->meta_title)
@@ -49,7 +49,7 @@ class WebController extends Controller
         // }
         
         
-        return view('web.home', compact('tools', 'homeSetting'));
+        return view('web.home', compact('homeSetting'));
     }
 
     public function toollang($tool){

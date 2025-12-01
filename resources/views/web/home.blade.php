@@ -6,7 +6,7 @@
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
     <div class="max-w-4xl mx-auto py-10 px-4 text-gray-800">
 
-    <!-- Title -->
+    {{-- <!-- Title -->
     <h1 class="text-3xl font-bold mb-4 text-center">TI 84 Calculator</h1>
 
     <!-- Intro -->
@@ -26,7 +26,8 @@
     </p>
     <div class="text-center">
         <a href="{{ url('/ti-84-calculator') }}" class="bg-blue-700 inline-block py-2 px-4 rounded-md text-white">Start Using the TI-84 Calculator</a>
-    </div>
+    </div> --}}
+    <div class="content">{!! @$homeSetting->data !!}</div>
     <div class="md:grid grid-cols-2 gap-4 justify-center my-6">
         @if ($tools->isNotEmpty())
             @foreach ($tools as $item)
@@ -37,7 +38,7 @@
             @endforeach
         @endif
     </div>
-   <div class="content">{!! @$homeSetting->data !!}</div>
+   
 
 </div>
 

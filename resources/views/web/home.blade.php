@@ -4,8 +4,7 @@
 
 
 <div class="max-w-4xl m-auto space-y-10 p-6 ">
-
-    <div class="content">{!! @$homeSetting->data !!}</div>
+    <div class="content">{!! html_entity_decode($post->content) !!}</div>
     <div class="md:grid grid-cols-2 gap-4 justify-center my-6">
         @if ($tools->isNotEmpty())
             @foreach ($tools as $item)

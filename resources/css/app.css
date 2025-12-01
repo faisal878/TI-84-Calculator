@@ -446,7 +446,9 @@ pre code {
 .filled{
   border:solid red 1px;
 }
-
+.content h1{
+  @apply text-3xl font-bold mb-4 text-center;
+}
 .content h2{
   @apply font-bold mb-3 leading-tight lg:text-[42px] md:text-[33px] text-[23px] text-[#22281E] relative;
 }

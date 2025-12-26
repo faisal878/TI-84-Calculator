@@ -38,10 +38,6 @@
         @endif
     </div>
    <div class="content">{!! @$homeSetting->data !!}</div>
-
-</div>
-
-  
 </div>
 
 @include('web.inc.footer')

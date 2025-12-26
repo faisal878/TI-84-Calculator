@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('{slug}', [ToolsController::class, 'toolsSingle'])->name('tool.single');
 Route::get('{lang?}/{slug}', [ToolsController::class, 'toolsSingle'])->name('tool.single');
 
-Route::redirect(
-    '/tools/online-graphing-calculator',
-    '/online-graphing-calculator',
-    301
-);
+Route::redirect('tools/online-graphing-calculator', 'online-graphing-calculator', 301);
 
 // Route::get('/tools/ti-30xs-calculator-online', function () {
 //     return redirect('/ti-30xs-calculator-online', 301); // Permanent Redirect

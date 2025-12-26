@@ -166,9 +166,9 @@ class ToolsController extends Controller
             
         $xDefaultLink = '';
         if (!$tool->parentTool) {
-            $xDefaultLink = url('tools/'.$tool->slug);
+            $xDefaultLink = url($tool->slug);
         } else {
-            $xDefaultLink = url('tools/'.$tool->parentTool->slug);
+            $xDefaultLink = url($tool->parentTool->slug);
         }
 
         $data = null;

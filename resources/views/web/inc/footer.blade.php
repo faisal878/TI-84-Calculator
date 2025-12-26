@@ -28,6 +28,6 @@
                 </div>
             </div>
         </div>
-        <div class="mt-5"><p class="text-sm text-[#b3d9cc]">© {{ date('Y') }} — Revision. All Rights Reserved. Design By <a href="https://manamil.dev/">Manamil Dev</a> </p></div>
+        <div class="mt-5"><p class="text-sm text-[#b3d9cc]">© {{ date('Y') }} — Revision. All Rights Reserved.</p></div>
     </div>
 </section>

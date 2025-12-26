@@ -4,6 +4,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
+Route::permanentRedirect('/tools/online-graphing-calculator', '/online-graphing-calculator');
+
 // Route::get('/', function () { return view('web.home'); })->name('home');
 Route::get('/', [WebController::class, 'home'])->name('home');
 

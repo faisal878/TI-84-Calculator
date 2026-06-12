@@ -40,7 +40,7 @@
                 </div>
                 {{-- <p class="text-center text-[#969696] mb-6">Need an account? <a href="{{ route('sign.up') }}" class="text-blue-600 underline"><b>Create one</b></a></p> --}}
                 {{-- <div class="text-center"> <a href="{{ route('forget.password') }}" class="text-blue-600 text-lg"><b>Forget Password?</b></a></div> --}}
-                <p class="text-[#969696] text-center mb-6 mt-14 text-md">Develop by <br> <a href="https://akstartechnologies.com/" class="text-orange font-bold" target="_blank">Ak Star Technologies</a></p>
+                <p class="text-[#969696] text-center mb-6 mt-14 text-md">Develop by <br> <a href="https://manamil.dev/" class="text-orange font-bold" target="_blank">Manamil Dev</a></p>
             </div>
         </div>
         <div class="w-[50%] h-screen lg:block hidden">

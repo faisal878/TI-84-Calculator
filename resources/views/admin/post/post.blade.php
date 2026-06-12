@@ -21,7 +21,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="post_content" class="text-[#808191] mb-1 text-sm block">Content <span class="text-red-600">*</span></label>
-                    <textarea name="content" id="post_content" rows="4" class="bg-gray-200 text-sm py-1 border-gray-300 w-full rounded-md px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-sky-600"></textarea>
+                    <textarea name="content" id="post_content" rows="4" class="tool_textarea bg-gray-200 text-sm py-1 border-gray-300 w-full rounded-md px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-sky-600"></textarea>
                 </div>
                 <div class="mb-4">
                     <label for="meta_title" class="text-[#808191] mb-1 text-sm block">Meta Title <span class="text-red-600">*</span></label>
@@ -80,17 +80,11 @@
 @push('script')
 
 <!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/v0h9k9gp515ty6n8fywi8a1squ5ba8e06fl4pmqjhbtapmd2/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js" integrity="sha512-6JR4bbn8rCKvrkdoTJd/VFyXAN4CE9XMtgykPWgKiHjou56YDJxWsi90hAeMTYxNwUnKSQu9JPc3SQUg+aGCHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('tinymce-script-2.js') }}"></script>
 <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 <script>
-  tinymce.init({
-    height: 700,
-    selector: '#post_content',
-    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-    content_style: "body { background-color: #e5e7eb; color: #000000; font-family: 'Inter', sans-serif; font-size:14px; }"
-  });
+init_tinymce(`.tool_textarea`, '700');
 
 document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name');

@@ -33,6 +33,10 @@
 
     gtag('config', 'G-N4MV60PYQF');
     </script>
+
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-1543265829915959">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1543265829915959" crossorigin="anonymous"></script>
 </head>
 <body>
     @yield('content')

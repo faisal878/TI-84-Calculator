@@ -179,6 +179,16 @@ class WebController extends Controller
     }
 
 
+    public function manual(){
+        seo()->title('TI-84 Calculator Manual — Complete User Guide')
+            ->description('Complete TI-84 Calculator online manual: getting started, keyboard layout, mode settings, error messages, and troubleshooting FAQs.')
+            ->keywords('TI-84 manual, TI-84 user guide, TI-84 calculator errors, TI-84 troubleshooting')
+            ->canonicalEnabled(true)
+            ->robots('index', 'follow');
+
+        return view('web.manual');
+    }
+
 
     public function privacy_policy(){
         $settings = Setting::where('type', 'privacy-policy')->first();

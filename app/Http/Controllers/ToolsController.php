@@ -163,6 +163,28 @@ class ToolsController extends Controller
         }else{
             seo()->robots('index', 'follow');
         }
+
+        seo()->jsonLdEnabled(true)
+            ->jsonLdType('SoftwareApplication')
+            ->jsonLdName($tool->title)
+            ->jsonLdDescription($tool->meta_description)
+            ->jsonLdImage(asset('assets/img/Logo.png'))
+            ->jsonLdUrl(url()->current())
+            ->jsonLdProperty('applicationCategory', 'EducationApplication')
+            ->jsonLdProperty('operatingSystem', 'Web Browser')
+            ->jsonLdProperty('offers', [
+                '@type' => 'Offer',
+                'price' => '0',
+                'priceCurrency' => 'USD'
+            ])
+            ->jsonLdProperty('publisher', [
+                '@type' => 'Organization',
+                'name' => 'TI84Calc.com',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('assets/img/Logo.png')
+                ]
+            ]);
             
         $xDefaultLink = '';
         if (!$tool->parentTool) {
@@ -197,7 +219,3 @@ class ToolsController extends Controller
     }
 
 }
-
-    
-
-

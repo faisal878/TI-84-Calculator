@@ -12,6 +12,7 @@ Route::get('/', [WebController::class, 'home'])->name('home');
 Route::get('/contact-us', [WebController::class, 'contact'])->name('contact');
 Route::get('/about-us', [WebController::class, 'about_us'])->name('about-us');
 Route::get('/manual', [WebController::class, 'manual'])->name('manual');
+Route::get('/author/{username}', [WebController::class, 'author'])->name('author');
 
 Route::get('/privacy-policy', [WebController::class, 'privacy_policy'])->name('privacy-policy');
 Route::get('/terms-and-conditions', [WebController::class, 'terms_and_conditions'])->name('terms-and-conditions');

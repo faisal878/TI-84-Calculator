@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Setting;
 use App\Models\Tool;
+use App\Models\User;
 use Illuminate\Support\Str;
 
 class WebController extends Controller
@@ -187,6 +188,19 @@ class WebController extends Controller
             ->robots('index', 'follow');
 
         return view('web.manual');
+    }
+
+
+    public function author($username){
+        $author = User::where('username', $username)->firstOrFail();
+        $posts = Post::with('category')->where('user_id', $author->id)->where('is_published', 1)->latest()->paginate(12);
+
+        seo()->title($author->name . ' — Author at TI84Calc.com')
+            ->description('Read articles and guides written by ' . $author->name . ', Content Writer at TI84Calc.com.')
+            ->canonicalEnabled(true)
+            ->robots('index', 'follow');
+
+        return view('web.author', compact('author', 'posts'));
     }
 
 
